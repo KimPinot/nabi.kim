@@ -1,11 +1,14 @@
 @react.components
 let default = () => {
-  <main className="page-content">
+  let cards = Article.list()->Belt.Array.map(filename => {
+    let article = filename->Article.read->Article.format
     <ArticleCard
-      id="test"
-      title="test..."
-      description="really test..."
-      date={Js.Date.fromString("2023-01-12 04:32:40")}
+      id={filename->Article.filenameToString}
+      title={article.data["title"]}
+      description={article.data["description"]}
+      date={article.data["date"]->Date.kst}
     />
-  </main>
+  })
+
+  <main className="page-content"> {cards->React.array} </main>
 }
