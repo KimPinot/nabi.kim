@@ -6,10 +6,14 @@
   "license": "MIT",
   "packageManager": "yarn@3.3.1",
   "scripts": {
-    "res:dev": "rescript build -w"
+    "res:dev": "rescript build -w",
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start"
   },
   "dependencies": {
     "@rescript/react": "^0.11.0",
+    "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rescript": "^10.1.1"
