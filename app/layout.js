@@ -1,1 +1,1 @@
-export { make as default } from "layouts/AppLayout.bs";
+export { make as default } from "layout/AppLayout.bs";

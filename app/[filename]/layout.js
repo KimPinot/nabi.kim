@@ -1,1 +1,1 @@
-export { make as default } from "layouts/ArticleLayout.bs";
+export { make as default } from "layout/ArticleLayout.bs";

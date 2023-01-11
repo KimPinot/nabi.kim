@@ -1,1 +1,1 @@
-export { default } from "pages/ArticlePage.bs";
+export { default } from "page/ArticlePage.bs";
