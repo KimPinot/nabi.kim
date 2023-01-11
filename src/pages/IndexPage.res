@@ -1,4 +1,11 @@
 @react.components
 let make = () => {
-  <main> {"Hello ReScript!"->React.string} </main>
+  <main className="page-content">
+    <ArticleCard
+      id="#"
+      title="test..."
+      description="really test..."
+      date={Js.Date.fromString("2023-01-12 04:32:40")}
+    />
+  </main>
 }
