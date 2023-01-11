@@ -1,0 +1,20 @@
+# https://yarnpkg.com/getting-started/qa/#which-files-should-be-gitignored
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# node
+node_modules
+
+# rescript
+.bsb.lock
+.merlin
+lib/
+*.bs.js
+
+# blog
+articles/

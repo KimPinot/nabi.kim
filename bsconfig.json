@@ -1,0 +1,19 @@
+{
+  "name": "nabi.kim",
+  "jsx": {
+    "version": 4,
+    "mode": "automatic"
+  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": ["@rescript/react"]
+}
