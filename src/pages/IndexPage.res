@@ -2,7 +2,7 @@
 let make = () => {
   <main className="page-content">
     <ArticleCard
-      id="#"
+      id="test"
       title="test..."
       description="really test..."
       date={Js.Date.fromString("2023-01-12 04:32:40")}
