@@ -20,8 +20,24 @@
     "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rehype-add-classes": "^1.0.0",
+    "rehype-highlight": "^5.0.2",
+    "rehype-raw": "^6.1.1",
+    "rehype-stringify": "^9.0.3",
+    "rehype-wrap": "^1.1.0",
+    "remark-breaks": "^3.0.2",
+    "remark-gemoji": "^7.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-github": "^11.2.4",
+    "remark-mdx": "^2.2.1",
+    "remark-mermaid": "^0.2.0",
+    "remark-mermaidjs": "^3.0.0",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "remark-render": "^0.0.16",
     "rescript": "^10.1.1",
     "sass": "^1.57.1",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "unified": "^10.1.2"
   }
 }
