@@ -16,6 +16,7 @@
     "autoprefixer": "^10.4.13",
     "daisyui": "^2.46.1",
     "date-fns": "^2.29.3",
+    "gray-matter": "^4.0.3",
     "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
