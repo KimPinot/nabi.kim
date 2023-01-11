@@ -1,4 +1,8 @@
+open Node.Fs
+open Node.Path
+
 type filename
+type markdown = string
 
 let article_folder = "articles"
 
@@ -6,15 +10,15 @@ let article_folder = "articles"
 @module external filenameToString: filename => string = "%identity"
 
 let list = () => {
-  Node.Fs.readdirSync(article_folder)
+  readdirSync(article_folder)
   |> Js.Array.filter(filename => filename->Path.extname == ".md")
   |> Js.Array.map(stringtoFilename)
 }
 
 let read = (filename: filename) => {
-  Node.Fs.readFileSync(Node.Path.resolve(article_folder, filename->filenameToString))(#utf8)
+  readFileSync(resolve(article_folder, filename->filenameToString))(#utf8)
 }
 
-let format = (markdown: string) => {
+let format = (markdown: markdown) => {
   markdown->GrayMatter.format
 }
