@@ -1,5 +1,5 @@
 @react.components
-let make = () => {
+let default = () => {
   <main className="page-content">
     <ArticleCard
       id="test"

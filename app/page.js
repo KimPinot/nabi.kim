@@ -1,1 +1,1 @@
-export { make as default } from "pages/IndexPage.bs";
+export { default } from "pages/IndexPage.bs";
