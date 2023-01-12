@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("//cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+
+* {
+  box-sizing: border-box;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+}
+
 @layer base {
   blockquote {
     @apply border-l-4 border-l-slate-200 bg-slate-50 p-3;
@@ -37,7 +46,7 @@
     @apply container max-w-5xl mx-auto py-4 px-5 keep-all;
 
     p {
-      line-height: 1.5;
+      line-height: 1.6;
 
       &:has(svg) {
         overflow-x: auto;
