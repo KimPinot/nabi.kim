@@ -23,6 +23,13 @@ let read = (filename: filename) => {
 
 let format = (markdown: markdown) => {
   markdown->GrayMatter.format
+  let sort = (filenames: array<filename>) => {
+    filenames |> Js.Array.sortInPlaceWith((prev, curr) => {
+      let prev_date = (prev->Item.get).data["date"]
+      let curr_date = (curr->Item.get).data["date"]
+      prev_date->Js.Date.getTime < curr_date->Js.Date.getTime ? 1 : -1
+    })
+  }
 }
 
 let render = (markdown: markdown) => {
