@@ -1,3 +1,5 @@
+%%raw(`import "highlight.js/scss/atom-one-light.scss"`)
+
 type props = {params: {"filename": Article.filename}}
 
 let default = async (props: props) => {
