@@ -6,7 +6,7 @@ module Layout = {
         <div className="page-content">
           <h1 className="text-2xl font-bold"> {title->React.string} </h1>
           <h3 className="text-lg flex gap-2 items-center">
-            //   <BiTime />
+            <ReactIcons.Bi.Time />
             {date->Date.kst->DateFns.format("yyyy-MM-dd hh:mm:ss")->React.string}
           </h3>
         </div>
