@@ -11,11 +11,11 @@ let make = () => {
             {"Posts"->React.string}
           </span>
         </Next.Link>
-        // <Next.Link href="/about" className="btn btn-ghost btn-xs">
-        //   <span className="text-md hover:text-primary transition-[color]">
-        //     {"About"->React.string}
-        //   </span>
-        // </Next.Link>
+        <Next.Link href="/about.mdx" className="btn btn-ghost btn-xs">
+          <span className="text-md hover:text-primary transition-[color]">
+            {"About"->React.string}
+          </span>
+        </Next.Link>
         // <Next.Link href="/category" className="btn btn-ghost btn-xs">
         //   <span className="text-md hover:text-primary transition-[color]">
         //     {"Category"->React.string}
