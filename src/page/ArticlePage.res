@@ -1,8 +1,7 @@
-type params = {"filename": Article.filename}
+type props = { params: {"filename": Article.filename}}
 
-@react.component
-let default = async (~params: params) => {
-  let article = params["filename"]->Article.read->Article.format
-  let __html = (await article.content->Article.render)->VFile.toString
+let default = async (props: props) => {
+  let { content } = Article.read(props.params["filename"])->Article.format
+  let __html = (await Article.render(content)) -> VFile.toString
   <div dangerouslySetInnerHTML={{"__html": __html}} />
 }
