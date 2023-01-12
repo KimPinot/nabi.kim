@@ -22,6 +22,6 @@ type params = {"filename": Article.filename}
 
 @react.component
 let make = (~params: params, ~children: React.element) => {
-  let article = params["filename"]->Article.read->Article.format
+  let article = params["filename"]->Article.Item.get
   <Layout title={article.data["title"]} date={article.data["date"]}> children </Layout>
 }

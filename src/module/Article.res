@@ -11,18 +11,27 @@ let article_folder = "articles"
 @module external stringtoFilename: string => filename = "%identity"
 @module external filenameToString: filename => string = "%identity"
 
-let list = () => {
-  readdirSync(article_folder)
-  |> Js.Array.filter(filename => filename->Path.extname == ".md")
-  |> Js.Array.map(stringtoFilename)
+module Item = {
+  let read = (filename: filename) => {
+    readFileSync(resolve(article_folder, filename->filenameToString))(#utf8)
+  }
+
+  let format = (markdown: markdown) => {
+    markdown->GrayMatter.format
+  }
+
+  let get = (filename: filename) => {
+    filename->read->format
+  }
 }
 
-let read = (filename: filename) => {
-  readFileSync(resolve(article_folder, filename->filenameToString))(#utf8)
-}
+module List = {
+  let get = () => {
+    readdirSync(article_folder)
+    |> Js.Array.filter(filename => filename->Path.extname == ".md")
+    |> Js.Array.map(stringtoFilename)
+  }
 
-let format = (markdown: markdown) => {
-  markdown->GrayMatter.format
   let sort = (filenames: array<filename>) => {
     filenames |> Js.Array.sortInPlaceWith((prev, curr) => {
       let prev_date = (prev->Item.get).data["date"]
