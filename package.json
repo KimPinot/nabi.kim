@@ -27,6 +27,7 @@
     "rehype-stringify": "^9.0.3",
     "rehype-wrap": "^1.1.0",
     "remark-breaks": "^3.0.2",
+    "remark-embed-images": "^3.1.0",
     "remark-gemoji": "^7.0.1",
     "remark-gfm": "^3.0.1",
     "remark-github": "^11.2.4",
@@ -40,5 +41,8 @@
     "sass": "^1.57.1",
     "tailwindcss": "^3.2.4",
     "unified": "^10.1.2"
+  },
+  "resolutions": {
+    "remark-embed-images@^3.1.0": "patch:remark-embed-images@npm%3A3.1.0#./.yarn/patches/remark-embed-images-npm-3.1.0-e9217c5f06.patch"
   }
 }

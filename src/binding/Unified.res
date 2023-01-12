@@ -10,6 +10,7 @@ module Module = {
   @module("remark-breaks") external remarkBreaks: t = "default"
   @module("remark-mermaid") external remarkMermaid: t = "default"
   @module("remark-rehype") external remarkRehype: t = "default"
+  @module("remark-embed-images") external remarkEmbedImages: t = "default"
   @module("rehype-stringify") external rehypeStringify: t = "default"
   @module("rehype-highlight") external rehypeHighlight: t = "default"
   @module("rehype-add-classes") external rehypeAddClasses: t = "default"

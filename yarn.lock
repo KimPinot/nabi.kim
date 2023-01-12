@@ -2086,6 +2086,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-absolute-url@npm:^3.0.0":
+  version: 3.0.3
+  resolution: "is-absolute-url@npm:3.0.3"
+  checksum: 5159b51d065d9ad29e16a2f78d6c0e41c43227caf90a45e659c54ea6fd50ef0595b1871ce392e84b1df7cfdcad9a8e66eec0813a029112188435abf115accb16
+  languageName: node
+  linkType: hard
+
 "is-alphabetical@npm:^2.0.0":
   version: 2.0.1
   resolution: "is-alphabetical@npm:2.0.1"
@@ -2197,6 +2204,15 @@ __metadata:
   version: 4.1.0
   resolution: "is-plain-obj@npm:4.1.0"
   checksum: 6dc45da70d04a81f35c9310971e78a6a3c7a63547ef782e3a07ee3674695081b6ca4e977fbb8efc48dae3375e0b34558d2bcd722aec9bddfa2d7db5b041be8ce
+  languageName: node
+  linkType: hard
+
+"is-relative-url@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "is-relative-url@npm:3.0.0"
+  dependencies:
+    is-absolute-url: ^3.0.0
+  checksum: ea9eb9dd980cc9464a9533f9fe5842328e7d2107f1bdb50d0aff8d7e27e96722b433a96a18be3a5f42a47e115f66a50f3d1094fdbbe803df8560d2b930cde56d
   languageName: node
   linkType: hard
 
@@ -3043,6 +3059,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mime@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "mime@npm:3.0.0"
+  bin:
+    mime: cli.js
+  checksum: f43f9b7bfa64534e6b05bd6062961681aeb406a5b53673b53b683f27fcc4e739989941836a355eef831f4478923651ecc739f4a5f6e20a76487b432bfd4db928
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.1.1":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -3210,6 +3235,7 @@ __metadata:
     rehype-stringify: ^9.0.3
     rehype-wrap: ^1.1.0
     remark-breaks: ^3.0.2
+    remark-embed-images: ^3.1.0
     remark-gemoji: ^7.0.1
     remark-gfm: ^3.0.1
     remark-github: ^11.2.4
@@ -3854,6 +3880,19 @@ __metadata:
     unified: ^10.0.0
     unist-util-visit: ^4.0.0
   checksum: 5f46b18818f8a77e4fbc607c99736eedbe1f8cbad3d7390ce8359f08e3b749de8778ec8812287a41f51ffef2524b0be0dd623fcdbcda5de7f13f9902851f80b3
+  languageName: node
+  linkType: hard
+
+"remark-embed-images@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "remark-embed-images@npm:3.1.0"
+  dependencies:
+    "@types/mdast": ^3.0.0
+    is-relative-url: ^3.0.0
+    mime: ^3.0.0
+    unified: ^10.0.0
+    unist-util-visit: ^4.0.0
+  checksum: 7dec877e7290b32c73c574a0bf9c64a552799d9b22d345458bace5501f380aaaeba911522b14f9d53767e1819f62d7f926014d07ca45375421eebb302511af26
   languageName: node
   linkType: hard
 

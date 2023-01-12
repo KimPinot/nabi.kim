@@ -50,6 +50,7 @@ let render = (markdown: markdown) => {
   ->use(remarkGithub, {"repository": "kimpinot/nabi.kim"})
   ->use(remarkGemoji, empty)
   ->use(remarkBreaks, empty)
+  ->use(remarkEmbedImages, {"directory": "articles"})
   ->use(remarkMermaid, {"launchOptions": empty, "svgo": Js.Nullable.null})
   ->use(remarkRehype, empty)
   ->use(rehypeStringify, empty)
