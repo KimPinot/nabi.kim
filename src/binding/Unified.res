@@ -18,4 +18,4 @@ module Module = {
 
 @module("unified") external unified: unit => _unified = "unified"
 @send external use: (_unified, Module.t, {..}) => _unified = "use"
-@send external process: (_unified, string) => promise<string> = "process"
+@send external process: (_unified, string) => promise<VFile.t> = "process"
