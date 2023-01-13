@@ -5,8 +5,10 @@ let default = () => {
     ->Article.List.sort
     ->Belt.Array.map(filename => {
       let article = filename->Article.Item.get
+      let filename = filename->Article.filenameToString
       <ArticleCard
-        id={filename->Article.filenameToString}
+        key={filename}
+        id={filename}
         title={article.data["title"]}
         description={article.data["description"]}
         date={article.data["date"]->Date.kst}
