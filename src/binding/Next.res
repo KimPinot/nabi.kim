@@ -234,6 +234,7 @@ module Image = {
     ~height: int=?,
     ~quality: int=?,
     ~priority: bool=?,
+    ~fill: bool=?,
     ~layout: imageLayout=?,
     ~onLoadingComplete: loadedImageSize => unit=?,
     ~ref: ReactDOM.domRef=?,

@@ -3,7 +3,7 @@ let make = () => {
   <header>
     <div className="page-content pb-0 flex items-center justify-between">
       <Next.Link href="/" className="avatar w-16 h-16 btn btn-square btn-xs btn-ghost">
-        <Next.Image src="/assets/avatar.png" alt="" layout={#fill} />
+        <Next.Image src="/assets/avatar.png" alt="" fill={true} />
       </Next.Link>
       <div className="flex">
         <Next.Link href="/" className="btn btn-ghost btn-xs">
