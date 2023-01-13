@@ -11,7 +11,7 @@
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",
-    "dev": "concurrency \"yarn res:dev\" \"yarn next:dev\""
+    "dev": "concurrently \"yarn res:dev\" \"yarn next:dev\""
   },
   "dependencies": {
     "@rescript/react": "^0.11.0",
@@ -43,7 +43,7 @@
     "unified": "^10.1.2"
   },
   "devDependencies": {
-    "concurrency": "^0.1.4"
+    "concurrently": "^7.6.0"
   },
   "resolutions": {
     "remark-embed-images@^3.1.0": "patch:remark-embed-images@npm%3A3.1.0#./.yarn/patches/remark-embed-images-npm-3.1.0-e9217c5f06.patch"
