@@ -51,7 +51,6 @@ let render = (markdown: markdown) => {
   ->use(remarkGemoji, empty)
   ->use(remarkBreaks, empty)
   ->use(remarkEmbedImages, {"directory": "articles"})
-  ->use(remarkMermaid, {"launchOptions": empty, "svgo": Js.Nullable.null})
   ->use(remarkRehype, empty)
   ->use(rehypeStringify, empty)
   ->use(rehypeHighlight, empty)

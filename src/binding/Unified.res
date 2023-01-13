@@ -8,7 +8,6 @@ module Module = {
   @module("remark-github") external remarkGithub: t = "default"
   @module("remark-gemoji") external remarkGemoji: t = "default"
   @module("remark-breaks") external remarkBreaks: t = "default"
-  @module("remark-mermaid") external remarkMermaid: t = "default"
   @module("remark-rehype") external remarkRehype: t = "default"
   @module("remark-embed-images") external remarkEmbedImages: t = "default"
   @module("rehype-stringify") external rehypeStringify: t = "default"

@@ -34,8 +34,6 @@
     "remark-gfm": "^3.0.1",
     "remark-github": "^11.2.4",
     "remark-mdx": "^2.2.1",
-    "remark-mermaid": "^0.2.0",
-    "remark-mermaidjs": "^3.0.0",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
     "remark-render": "^0.0.16",
