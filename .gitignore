@@ -21,3 +21,4 @@ articles/
 
 # nextjs
 .next
+.vercel
