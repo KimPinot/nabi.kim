@@ -1,0 +1,17 @@
+diff --git a/index.js b/index.js
+index 8d7bfecd0ec069518f4a81a8fdeb0efa5fd30a81..93cff365e199bee176f5db73922dc6846c6415fe 100644
+--- a/index.js
++++ b/index.js
+@@ -13,10 +13,10 @@ import {visit} from 'unist-util-visit'
+  *
+  * @type {import('unified').Plugin<void[], Root>}
+  */
+-export default function embedImages() {
++export default function embedImages(options) {
+   return (tree, file, done) => {
+     let count = 0
+-    const base = file.dirname ? path.resolve(file.cwd, file.dirname) : file.cwd
++    const base = file.dirname ? path.resolve(file.cwd, file.dirname, options.directory) : path.resolve(file.cwd, options.directory)
+ 
+     visit(tree, 'image', (node) => {
+       if (node.url && isRelativeUrl(node.url) && !node.url.startsWith('/')) {
