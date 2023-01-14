@@ -33,15 +33,17 @@
     word-break: keep-all;
   }
 
+  .markdown-content {
+    * {
+      line-height: 1.8 !important;
+    }
+  }
+
   .page-content {
     @apply container max-w-5xl mx-auto py-4 px-5 keep-all;
 
-    li {
-      line-height: 1.8;
-    }
-
     p {
-      line-height: 1.8;
+      line-height: 1.5;
 
       &:has(svg) {
         overflow-x: auto;
