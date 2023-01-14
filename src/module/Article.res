@@ -84,6 +84,7 @@ let render = (markdown: markdown) => {
       "ol": "markdown-ol list-decimal",
       "img": "markdown-img card",
       "table": "markdown-table table",
+      "pre": "mb-1 last:mb-0",
     },
   )
   ->use(
