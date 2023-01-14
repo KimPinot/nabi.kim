@@ -40,6 +40,18 @@ module List = {
       prev_date->Js.Date.getTime < curr_date->Js.Date.getTime ? 1 : -1
     })
   }
+
+  module Filter = {
+    let hidden = (filenames: array<filename>) => {
+      filenames |> Js.Array.filter(filename => {
+        let hidden = (filename->Item.get).data["hidden"]
+        switch hidden {
+        | Some(hidden) => hidden != true
+        | _ => true
+        }
+      })
+    }
+  }
 }
 
 let render = (markdown: markdown) => {

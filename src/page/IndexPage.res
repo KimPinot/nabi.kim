@@ -3,6 +3,7 @@ let default = () => {
   let cards =
     Article.List.get()
     ->Article.List.sort
+    ->Article.List.Filter.hidden
     ->Belt.Array.map(filename => {
       let article = filename->Article.Item.get
       let filename = filename->Article.filenameToString
