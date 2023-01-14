@@ -35,6 +35,28 @@
   h4:first-child {
     margin-top: unset !important;
   }
+
+  .emoji {
+    display: inline-block;
+    height: 1.1rem;
+    vertical-align: -3px;
+  }
+
+  h1 .emoji {
+    height: 1.5rem;
+  }
+
+  h2 .emoji {
+    height: 1.25rem;
+  }
+
+  h3 .emoji {
+    height: 1.125rem;
+  }
+
+  .hljs {
+    padding: 1rem !important;
+  }
 }
 
 @layer components {
@@ -45,8 +67,12 @@
   .page-content {
     @apply container max-w-5xl mx-auto py-4 px-5 keep-all;
 
+    li {
+      line-height: 1.8;
+    }
+
     p {
-      line-height: 1.6;
+      line-height: 1.8;
 
       &:has(svg) {
         overflow-x: auto;
