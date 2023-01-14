@@ -6,6 +6,7 @@ module Head = {
       <meta name="description" content={description} />
       <meta property="og:title" content={`nabi.kim | ${title}`} />
       <meta property="og:image" content="https://nabi.kim/assets/opengraph.png" />
+      <meta property="og:description" content={description} />
       <DefaultHead />
     </>
   }
