@@ -12,7 +12,10 @@ module Layout = {
         </div>
       </header>
       <article className={"markdown-content"}>
-        <div className="page-content pt-0 pb-36"> children </div>
+        <div className="page-content pt-0 pb-36">
+          children
+          <Comments />
+        </div>
       </article>
     </main>
   }
