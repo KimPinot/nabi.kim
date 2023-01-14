@@ -15,5 +15,8 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": ["@rescript/react"]
+  "bs-dependencies": ["@rescript/react"],
+  "js-post-build": {
+    "cmd": "./scripts/postbuild.sh"
+  }
 }
