@@ -9,5 +9,17 @@ let make = (~children: React.element) => {
       <Header />
       children
     </body>
+    <Next.Script
+      src="https://www.googletagmanager.com/gtag/js?id=G-FSPPFRL14L" strategy={#afterInteractive}
+    />
+    <Next.Script>
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FSPPFRL14L');
+        `->React.string}
+    </Next.Script>
   </html>
 }

@@ -240,3 +240,19 @@ module Image = {
     ~ref: ReactDOM.domRef=?,
   ) => React.element = "default"
 }
+
+module Script = {
+  type strategy = [
+    | #beforeInteractive
+    | #defer
+    | #lazyOnload
+    | #afterInteractive
+    | #dangerouslyBlockRendering
+  ]
+  @module("next/script") @react.component
+  external make: (
+    ~src: string=?,
+    ~strategy: strategy=?,
+    ~children: React.element=?,
+  ) => React.element = "default"
+}
