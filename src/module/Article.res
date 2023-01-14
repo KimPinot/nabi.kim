@@ -13,7 +13,8 @@ let article_folder = "articles"
 
 module Item = {
   let read = (filename: filename) => {
-    readFileSync(resolve(article_folder, filename->filenameToString))(#utf8)
+    let filename = filename->filenameToString->Js.Global.decodeURI
+    readFileSync(resolve(article_folder, filename))(#utf8)
   }
 
   let format = (markdown: markdown) => {
