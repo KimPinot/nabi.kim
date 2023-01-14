@@ -1,0 +1,54 @@
+@import url("//cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+
+* {
+  box-sizing: border-box;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+}
+
+ul ul {
+  list-style: circle !important;
+}
+
+ul ul ul {
+  list-style: square !important;
+}
+
+ul ul ul ul {
+  list-style: disc !important;
+}
+
+ul ul ul ul ul {
+  list-style: square !important;
+}
+
+ul ul ul ul ul ul {
+  list-style: disc !important;
+}
+
+.utterances {
+  max-width: unset;
+}
+
+.emoji {
+  display: inline-block;
+  height: 1.1rem;
+  vertical-align: -3px;
+}
+
+h1 .emoji {
+  height: 1.5rem;
+}
+
+h2 .emoji {
+  height: 1.25rem;
+}
+
+h3 .emoji {
+  height: 1.125rem;
+}
+
+.hljs {
+  padding: 1rem !important;
+}

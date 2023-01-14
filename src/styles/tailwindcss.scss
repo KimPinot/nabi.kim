@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("//cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
-
-* {
-  box-sizing: border-box;
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", sans-serif;
-}
-
 @layer base {
   blockquote {
     @apply border-l-4 border-l-slate-200 bg-slate-50 p-3;
@@ -34,28 +25,6 @@
   h3:first-child,
   h4:first-child {
     margin-top: unset !important;
-  }
-
-  .emoji {
-    display: inline-block;
-    height: 1.1rem;
-    vertical-align: -3px;
-  }
-
-  h1 .emoji {
-    height: 1.5rem;
-  }
-
-  h2 .emoji {
-    height: 1.25rem;
-  }
-
-  h3 .emoji {
-    height: 1.125rem;
-  }
-
-  .hljs {
-    padding: 1rem !important;
   }
 }
 
