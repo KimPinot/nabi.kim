@@ -1,1 +1,1 @@
-export { make as default } from "AppHead.bs";
+export { make as default } from "head/AppHead.bs";

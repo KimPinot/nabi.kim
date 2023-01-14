@@ -1,15 +1,11 @@
 @react.component
 let make = () => {
   <>
-    <title> {"nabi.kim"->React.string} </title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name="description" content="평범한 기술 블로그" />
     <meta name="og:type" content="blog" />
     <meta name="og:locale" content="ko_KR" />
     <meta property="og:url" content="https://nabi.kim" />
-    <meta property="og:title" content="nabi.kim" />
     <meta property="og:site_name" content="nabi.kim" />
-    <meta property="og:description" content="평범한 기술 블로그" />
     <meta property="og:image" content="https://nabi.kim/assets/opengraph.png" />
     <meta
       property="og:image:alt"
