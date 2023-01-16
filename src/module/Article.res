@@ -27,20 +27,6 @@ module Item = {
 }
 
 module List = {
-  let get = () => {
-    readdirSync(article_folder)
-    |> Js.Array.filter(filename => filename->Path.extname == ".md")
-    |> Js.Array.map(stringtoFilename)
-  }
-
-  let sort = (filenames: array<filename>) => {
-    filenames |> Js.Array.sortInPlaceWith((prev, curr) => {
-      let prev_date = (prev->Item.get).data["date"]
-      let curr_date = (curr->Item.get).data["date"]
-      prev_date->Js.Date.getTime < curr_date->Js.Date.getTime ? 1 : -1
-    })
-  }
-
   module Filter = {
     let hidden = (filenames: array<filename>) => {
       filenames |> Js.Array.filter(filename => {
@@ -51,6 +37,21 @@ module List = {
         }
       })
     }
+  }
+
+  let get = () => {
+    readdirSync(article_folder)
+    |> Js.Array.filter(filename => filename->Path.extname == ".md")
+    |> Js.Array.map(stringtoFilename)
+    |> Filter.hidden
+  }
+
+  let sort = (filenames: array<filename>) => {
+    filenames |> Js.Array.sortInPlaceWith((prev, curr) => {
+      let prev_date = (prev->Item.get).data["date"]
+      let curr_date = (curr->Item.get).data["date"]
+      prev_date->Js.Date.getTime < curr_date->Js.Date.getTime ? 1 : -1
+    })
   }
 }
 
@@ -67,8 +68,7 @@ module Category = {
       | Some(categories) => categories |> joinWith("/")
       | None => "Uncategorized"
       }
-      let value =
-        category->get(key) |> Js.Option.getWithDefault([])
+      let value = category->get(key) |> Js.Option.getWithDefault([])
       category->set(key, concat(value, [filename])->List.sort)
     })
     category
@@ -84,13 +84,13 @@ module Tags = {
     filenames |> forEach(filename => {
       let file_tags = (filename->Item.get).data["tags"]
       switch file_tags {
-        | Some(file_tags) => {
-          file_tags |> forEach(tag => {
-            let value = tags->get(tag) |> Js.Option.getWithDefault([])
-            tags->set(tag, concat(value, [filename])->List.sort)
-          })
-        }
-        | None => ()
+      | Some(file_tags) =>
+        file_tags |> forEach(tag => {
+          let value = tags->get(tag) |> Js.Option.getWithDefault([])
+          tags->set(tag, concat(value, [filename])->List.sort)
+        })
+
+      | None => ()
       }
     })
     tags
