@@ -6,7 +6,7 @@ type grayMatterResponse = {
     "date": Js.Date.t,
     "tags": option<array<string>>,
     "hidden": option<bool>,
-    "categoires": array<string>,
+    "categories": option<array<string>>,
   },
 }
 

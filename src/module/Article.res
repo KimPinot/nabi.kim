@@ -54,6 +54,49 @@ module List = {
   }
 }
 
+module Category = {
+  open Js.Dict
+  open Js.Array
+
+  let make = (filenames: array<filename>) => {
+    let category: Js.Dict.t<array<filename>> = Js.Dict.empty()
+    // do main logic
+    filenames |> forEach(filename => {
+      let categories = (filename->Item.get).data["categories"]
+      let key = switch categories {
+      | Some(categories) => categories |> joinWith("/")
+      | None => "Uncategorized"
+      }
+      let value =
+        category->get(key) |> Js.Option.getWithDefault([])
+      category->set(key, concat(value, [filename])->List.sort)
+    })
+    category
+  }
+}
+
+module Tags = {
+  open Js.Array
+  open Js.Dict
+
+  let make = (filenames: array<filename>) => {
+    let tags: Js.Dict.t<array<filename>> = Js.Dict.empty()
+    filenames |> forEach(filename => {
+      let file_tags = (filename->Item.get).data["tags"]
+      switch file_tags {
+        | Some(file_tags) => {
+          file_tags |> forEach(tag => {
+            let value = tags->get(tag) |> Js.Option.getWithDefault([])
+            tags->set(tag, concat(value, [filename])->List.sort)
+          })
+        }
+        | None => ()
+      }
+    })
+    tags
+  }
+}
+
 let render = (markdown: markdown) => {
   let empty = Js.Obj.empty()
   unified()
