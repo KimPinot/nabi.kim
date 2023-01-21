@@ -21,6 +21,11 @@ let make = () => {
             {"Category"->React.string}
           </span>
         </Next.Link>
+        <Next.Link href="/tag" className="btn btn-ghost btn-xs">
+          <span className="text-md hover:text-primary transition-[color]">
+            {"Tag"->React.string}
+          </span>
+        </Next.Link>
         // <Next.Link href="/notes" className="btn btn-ghost btn-xs">
         //   <span className="text-md hover:text-primary transition-[color]">
         //     {"Notes"->React.string}
