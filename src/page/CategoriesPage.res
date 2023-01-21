@@ -3,6 +3,7 @@ let default = () => {
   let category_keys = categories->Js.Dict.keys
 
   <div className="page-content">
+    <h1 className="text-3xl font-bold my-2"> {"Categories"->React.string} </h1>
     {category_keys
     |> Js.Array2.sortInPlace
     |> Js.Array.map(key => {
