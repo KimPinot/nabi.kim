@@ -11,6 +11,7 @@
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",
+    "generate:sitemap": "node scripts/sitemap.cjs",
     "dev": "concurrently \"yarn res:dev\" \"yarn next:dev\""
   },
   "dependencies": {

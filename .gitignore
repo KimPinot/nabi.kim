@@ -22,3 +22,6 @@ articles/
 # nextjs
 .next
 .vercel
+
+# sitemap (will generated)
+sitemap.xml
